@@ -103,8 +103,8 @@ body {
 /* DATE SECTION */
 .date-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 12px;
   margin-bottom: 20px;
   padding: 0;
   background-color: transparent;
@@ -118,7 +118,8 @@ body {
 
 .actions {
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 18px;
 }
 
 .search-btn,
@@ -134,8 +135,13 @@ body {
 
 .search-btn img,
 .calendar-btn img {
-  width: 18px;
-  height: 18px;
+  width: 23px;
+  height: 23px;
+}
+
+.calendar-btn img {
+  width: 31px;
+  height: 31px;
 }
 
 /* STAFF LIST */
