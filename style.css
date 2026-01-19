@@ -17,7 +17,6 @@ body {
   margin: 0;
   display: flex;
   justify-content: center;
-  padding: 20px 0;
 }
 
 .app {
@@ -25,6 +24,9 @@ body {
   border-radius: 28px;
   padding: 20px;
   position: relative;
+  margin: auto;
+  border: 1px solid black;
+  width: 98vw;
 }
 
 /* HEADER */

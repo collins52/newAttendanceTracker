@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance</title>
+  <link rel="stylesheet" href="attendance.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Attendance</h1>
+
+      <!-- Admin photo placeholder -->
+      <div class="avatar">
+        <!-- Admin image will be inserted here -->
+      </div>
+    </header>
+
+    <!-- STATUS FILTER -->
+    <section class="status-filter">
+      <button class="status-btn active" data-status="present">Present</button>
+      <button class="status-btn" data-status="absent">Absent</button>
+      <button class="status-btn" data-status="late">Late</button>
+      <button class="nav-arrow right" aria-label="More status">›</button>
+    </section>
+
+    <!-- DATE AND ACTIONS -->
+    <div class="date-section">
+      <div class="date-display">5th Oct 2025</div>
+      <div class="actions">
+        <button class="search-btn" aria-label="Search">
+          <img src="../assets/search.svg" alt="Search">
+        </button>
+        <button class="calendar-btn" aria-label="Calendar">
+          <img src="../assets/calendar.svg" alt="Calendar">
+        </button>
+      </div>
+    </div>
+
+    <!-- STAFF LIST -->
+    <section class="staff-list">
+      <div class="staff-item">
+        <button class="staff-header" aria-expanded="false">
+          <span class="expand-icon">›</span>
+          <span class="staff-name">Collins omniievusa</span>
+          <span class="status-badge present">✓</span>
+        </button>
+        <div class="staff-details">
+          <!-- Details will appear when expanded -->
+        </div>
+      </div>
+
+      <div class="staff-item">
+        <button class="staff-header" aria-expanded="false">
+          <span class="expand-icon">›</span>
+          <span class="staff-name">Miracle odili</span>
+        </button>
+        <div class="staff-details">
+          <!-- Details will appear when expanded -->
+        </div>
+      </div>
+
+      <div class="staff-item">
+        <button class="staff-header" aria-expanded="true">
+          <span class="expand-icon">›</span>
+          <span class="staff-name">Kelvin Bond</span>
+        </button>
+        <div class="staff-details open">
+          <div class="detail-item">
+            <span class="detail-label">Staff Id:</span>
+            <span class="detail-value">235642</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Time:</span>
+            <span class="detail-value">07:30 AM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="staff-item">
+        <button class="staff-header" aria-expanded="false">
+          <span class="expand-icon">›</span>
+          <span class="staff-name">John doe</span>
+        </button>
+        <div class="staff-details">
+          <!-- Details will appear when expanded -->
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav">
+      <a href="../index.html" class="nav-item" title="Home">
+        <img src="../assets/home.svg" alt="">
+      </a>
+
+      <a href="./attendance.html" class="nav-item active" title="Attendance">
+        <img src="../assets/list.svg" alt="">
+      </a>
+
+      <a href="../addStaff/addStaff.html" class="nav-item" title="Add">
+        <img src="../assets/add_circle.svg" alt="">
+      </a>
+
+      <a href="../staffList/staffList.html" class="nav-item" title="Reports">
+        <img src="../assets/checklist.svg" alt="">
+      </a>
+    </nav>
+
+  </div>
+
+  <script src="attendance.js"></script>
+
+</body>
+</html>
