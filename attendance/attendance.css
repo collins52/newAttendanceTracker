@@ -208,7 +208,7 @@ body {
 }
 
 .status-badge.present {
-  background-color: var(--green-light);
+  background: var(--green-light);
   color: #1e7e34;
 }
 

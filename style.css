@@ -27,6 +27,7 @@ body {
   margin: auto;
   border: 1px solid black;
   width: 98vw;
+  height: 100vh;
 }
 
 /* HEADER */
