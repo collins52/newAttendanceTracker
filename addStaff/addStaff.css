@@ -108,6 +108,31 @@ body {
   color: var(--blue);
 }
 
+/* STAFF ROLE DROPDOWN */
+.staff-role {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--blue-light);
+  border: none;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: var(--text-dark);
+  cursor: pointer;
+  width: 100%;
+}
+
+.staff-role:focus {
+  outline: none;
+  border: 1px solid var(--blue);
+}
+
+.staff-role option {
+  color: var(--text-dark);
+}
+
+
 .btn-primary {
   padding: 14px 20px;
   background-color: var(--blue);

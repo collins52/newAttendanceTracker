@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Add Staff</title>
   <link rel="stylesheet" href="addStaff.css" />
-</head>
+  <script src="./addStaff.js" defer></script>
+</head> 
 <body>
 
   <div class="app">
@@ -26,6 +27,16 @@
           </div>
 
           <div class="form-group">
+            <select class="form-input staff-role" required>
+              <option value="" disabled selected>Select Role</option>
+              <option value="admin">Admin</option>
+              <option value="manager">Manager</option>
+              <option value="staff">Staff</option>
+              <option value="intern">Intern</option>
+            </select>
+          </div>
+
+          <div class="form-group">
             <input 
               type="text" 
               class="form-input staff-id-input" 
@@ -33,6 +44,7 @@
               readonly
             >
           </div>
+
 
           <button type="button" class="btn-primary" id="generateBtn">
             Generate staff id
