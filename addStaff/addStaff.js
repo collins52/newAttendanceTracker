@@ -10,3 +10,5 @@ form.addEventListener('submit', (e) => {
   console.log({ userName, staffID, role });
   // You can now send this data to Firebase
 });
+
+
