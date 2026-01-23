@@ -32,19 +32,28 @@
     <!-- DATE AND ACTIONS -->
     <div class="date-section">
       <div class="date-display">5th Oct 2025</div>
+      <!--  -->
       <div class="actions">
-      <button class="search-btn" aria-label="Search">
-        <img src="../assets/search.svg" alt="Search">
-      </button>
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search staff..."
+          />
+          <button class="search-btn">
+            <img src="../assets/search.svg" alt="" srcset="">
+          </button>
+        </div>
 
-      <button class="calendar-btn" aria-label="Calendar">
-        <img src="../assets/calendar.svg" alt="Calendar">
-      </button>
 
-      <!-- Hidden native date input -->
-      <input type="date" id="calendarInput">
+        <button class="calendar-btn" aria-label="Calendar" type="button">
+          <img src="../assets/calender.svg" alt="Calendar">
+        </button>
+
+        <input type="date" id="calendarInput">
     </div>
 
+<!--  -->
     </div>
 
     <!-- STAFF LIST -->
@@ -67,10 +76,6 @@
       <div class="detail-row">
         <span class="detail-label">Time In:</span>
         <span class="detail-value">07:30 AM</span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-label">Time Out:</span>
-        <span class="detail-value">03:45 PM</span>
       </div>
     </div>
   </div>

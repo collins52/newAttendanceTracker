@@ -169,6 +169,29 @@ body {
   height: 23px;
 }
 
+/* SEARCH INPUT */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#searchInput {
+  display: block;        /* IMPORTANT */
+  width: 100%;
+  max-width: 220px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+#searchInput:focus {
+  border-color: #4f46e5;
+}
+
+
+
 .calendar-btn img {
   width: 31px;
   height: 31px;
@@ -253,9 +276,25 @@ body {
 .status-badge.late { background: #FFAA00; }
 .status-badge.early { background: #1E88FF; }
 
+/* ACTIVE STATE OVERRIDES */
+
+/* Absent */
+.status-btn[data-status="absent"].active {
+  background: #FFCFCF;
+  color: #FF0000;
+}
+
+/* Early & Late */
+.status-btn[data-status="early"].active,
+.status-btn[data-status="late"].active {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+
 /* Staff Details */
 .staff-details {
-  display: none; /* keep hidden until expanded */
+  /* display: none; keep hidden until expanded */
   padding: 12px 16px;
   background: #f8f8f8;
   border-top: 1px solid #eee;
