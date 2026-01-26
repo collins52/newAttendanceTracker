@@ -26,6 +26,11 @@
     │   ├── attendance.css
     │   └── attendance.js
     │
+    ├── authentication/
+    │   ├── login.html
+    │   ├── login.js
+    │   └── login.css
+    │
     ├── staffList/
     │   ├── staffList.html
     │   ├── staffList.css
