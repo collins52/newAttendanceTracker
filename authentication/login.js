@@ -1,37 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-    setupLogin({
-        usernameId: 'email',
-        passwordId: 'password',
-        buttonId: 'loginBtn',
-        errorId: 'loginError',
-        successRedirect: '../AdminDashboard/index.html'
-    });
-})
+// auth/login.js
+import { auth } from "../firebase/firebase.js";
+import {
+  signInWithEmailAndPassword
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
-function setupLogin({ usernameId, passwordId, buttonId, errorId, successRedirect }) {
-  const usernameInput = document.getElementById(usernameId);
-  const passwordInput = document.getElementById(passwordId);
-  const loginBtn = document.getElementById(buttonId);
-  const loginError = document.getElementById(errorId);
+const loginForm = document.getElementById("loginForm");
+const errorText = document.querySelector(".error-message");
 
-  if (!usernameInput || !passwordInput || !loginBtn || !loginError) {
-    console.error('Login elements not found');
-    return;
+loginForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const email = loginForm.email.value.trim();
+  const password = loginForm.password.value.trim();
+
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+    window.location.href = "../AdminDashboard/index.html";
+  } catch (error) {
+    errorText.textContent = "Invalid email or password";
   }
-
-  const DUMMY_USERNAME = 'admin@gmail.com';
-  const DUMMY_PASSWORD = 'admin123';
-
-  loginBtn.addEventListener('click', () => {
-    const username = usernameInput.value.trim();
-    const password = passwordInput.value.trim();
-
-    if (username === DUMMY_USERNAME && password === DUMMY_PASSWORD) {
-      // Successful login
-      window.location.href = successRedirect;
-    } else {
-      // Wrong credentials
-      loginError.textContent = 'Invalid username or password!';
-    }
-  });
-}
+});
